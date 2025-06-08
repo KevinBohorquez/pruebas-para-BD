@@ -6,7 +6,7 @@ if __name__ == "__main__":
     port = int(os.getenv("PORT", 8000))  # Railway inyecta PORT en producción
 
     uvicorn.run(
-        "app.main:app",  # Ajusta si tu archivo y estructura es distinta
+        "main:app",  # Ajusta si tu archivo y estructura es distinta
         host=host,
         port=port,
         reload=os.getenv("ENVIRONMENT", "development") == "development"
